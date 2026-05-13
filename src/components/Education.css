@@ -1,0 +1,72 @@
+.edu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.edu-item {
+  margin-bottom: 2rem;
+}
+
+.edu-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.edu-period {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+.mt-4 {
+  margin-top: 2rem;
+}
+
+/* Modern Awards List without the AI-generated look */
+.awards-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.award-item:last-child {
+  border-bottom: none;
+}
+
+.award-item::before {
+  content: "✦";
+  margin-right: 14px;
+  font-size: 0.8rem;
+  color: var(--border-color);
+  transition: color 0.3s ease;
+}
+
+.award-item:hover {
+  color: var(--text-primary);
+  transform: translateX(6px);
+}
+
+.award-item:hover::before {
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .edu-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
